@@ -32,9 +32,13 @@
   height: 4rem;
   color: $c-dark;
   border-radius: 50%;
-  transition-property: all;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in-out;
+
+
+  transform: scale3d(0, 0, 0);
+  transition-property: transform;
+  transition-duration: 1000ms;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  transition-delay: 500ms;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     display: none;
@@ -100,6 +104,10 @@
       border-color: $c-purple;
     }
   }
+}
+
+.active-page .social-block__toggler {
+  transform: scale3d(1, 1, 1);
 }
 
 .social-block__list {
@@ -270,3 +278,17 @@
     }
   }
 }
+
+// @keyframes socialToggler {
+//   from {
+//     transform: scale3d(0, 0, 0);
+//   }
+
+//   50% {
+//     transform: scale3d(1.25, 1.25, 1.25)
+//   }
+
+//   100% {
+//     transform: scale3d(1, 1, 1)
+//   }
+// }
