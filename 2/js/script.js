@@ -10532,7 +10532,7 @@ __webpack_require__.r(__webpack_exports__);
   let getBodyActive = () => {
     const a = document.querySelector(`body`);
 
-    a.classList.add(`active-page`);
+    a.classList.add(`has-loaded`);
   };
 
   window.onload = function () {
