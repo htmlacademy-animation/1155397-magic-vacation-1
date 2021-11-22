@@ -362,3 +362,21 @@
 .screen--rules {
   background-color: $c-dark;
 }
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background: $c-dark;
+  transition: opacity 0.3s ease-in, top 0s 1s;
+  z-index: 10;
+  opacity: 0;
+}
+
+.overlay.active {
+  top: 0;
+  opacity: 1;
+  transition: top 0.3s ease-out;
+}
